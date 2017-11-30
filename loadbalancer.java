@@ -10,14 +10,14 @@ public class loadbalancer{
 ()));
 		String clientsentence=messagefromclient.readLine();
 
-		if(clientsentence.contains("boy")){
+		if(clientsentence.contains("Alpha")){
 		Socket server=new Socket("192.168.190.128",2345);
 		DataOutputStream outtoserver=new DataOutputStream(server.getOutputStream());
 		outtoserver.writeBytes(clientsentence+"\n");
 		server.close();
 		}
 		
-		else if(clientsentence.contains("girl")){
+		else if(clientsentence.contains("Beta")){
 		Socket server2=new Socket ("192.168.190.132",4646);
 		DataOutputStream outtoserver2=new DataOutputStream(server2.getOutputStream());
 		server2.close();
