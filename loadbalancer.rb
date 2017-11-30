@@ -11,12 +11,12 @@ puts"#{rhost} connect to loadbalancer"
 fromclient=client.gets
 puts "message from client: #{fromclient}"
 
-if fromclient=="boy"
+if fromclient=="Alpha"
 sockettoserver1=TCPSocket.open("192.168.190.128",3000)
 sockettoserver1.write(fromclient)
 sockettoserver1.close
 
-elsif fromclient=="girl"
+elsif fromclient=="Beta"
 sockettoserver2=TCPSocket.open("192.168.190.132",4000)
 sockettoserver2.write(fromclient)
 sockettoserver2.close
